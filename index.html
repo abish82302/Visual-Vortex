@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>GeneVision AI</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- CHART -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- THREE JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- LEAFLET MAP -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet/dist/leaflet.css"
+  />
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav class="navbar">
+
+    <h1>GeneVision AI</h1>
+
+    <ul>
+
+      <li><a href="#home">Home</a></li>
+
+      <li><a href="#predict">Prediction</a></li>
+
+      <li><a href="#dna">DNA Lab</a></li>
+
+      <li><a href="#hospital">Hospital Map</a></li>
+
+    </ul>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+
+      <h2>
+        AI Powered Genetics &
+        Biotechnology Platform
+      </h2>
+
+      <p>
+
+        Detect diseases, analyze DNA,
+        predict hereditary disorders,
+        and revolutionize healthcare
+        using Artificial Intelligence.
+
+      </p>
+
+      <button onclick="scrollToPrediction()">
+        Start Analysis
+      </button>
+
+    </div>
+
+    <div id="dnaCanvas"></div>
+
+  </section>
+
+  <!-- FEATURES -->
+
+  <section class="features">
+
+    <div class="card">
+
+      <h3>AI Disease Prediction</h3>
+
+      <p>
+        Predict diseases using
+        AI-powered symptom analysis.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <h3>DNA Visualization</h3>
+
+      <p>
+        3D genome and mutation
+        analysis system.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <h3>Smart Hospital Map</h3>
+
+      <p>
+        Real-time nearby hospitals
+        using geolocation.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <h3>AI Medical Assistant</h3>
+
+      <p>
+        Voice-enabled intelligent
+        healthcare chatbot.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- AI PREDICTION -->
+
+  <section
+    id="predict"
+    class="prediction"
+  >
+
+    <h2>AI Disease Prediction</h2>
+
+    <div class="prediction-box">
+
+      <input
+        type="text"
+        id="symptoms"
+        placeholder="Enter symptoms..."
+      />
+
+      <input
+        type="number"
+        id="age"
+        placeholder="Age"
+      />
+
+      <select id="gender">
+
+        <option>Male</option>
+
+        <option>Female</option>
+
+      </select>
+
+      <textarea
+        id="history"
+        placeholder="Family Genetic History"
+      ></textarea>
+
+      <button onclick="predictDisease()">
+        Analyze Disease
+      </button>
+
+    </div>
+
+    <div class="results">
+
+      <h3 id="diseaseResult"></h3>
+
+      <h3 id="risk"></h3>
+
+      <h3 id="treatment"></h3>
+
+    </div>
+
+    <canvas id="diseaseChart"></canvas>
+
+  </section>
+
+  <!-- DNA SECTION -->
+
+  <section
+    class="dna-section"
+    id="dna"
+  >
+
+    <h2>DNA / Genome Analysis</h2>
+
+    <div class="dna-grid">
+
+      <div class="dna-card">
+
+        <h3>Mutation Scanner</h3>
+
+        <p>
+          AI detects genetic mutations
+          and abnormalities.
+        </p>
+
+      </div>
+
+      <div class="dna-card">
+
+        <h3>Chromosome Mapping</h3>
+
+        <p>
+          Advanced chromosome
+          intelligence system.
+        </p>
+
+      </div>
+
+      <div class="dna-card">
+
+        <h3>Genome Similarity</h3>
+
+        <p>
+          DNA inheritance analysis
+          and matching.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- LIVE MAP -->
+
+  <section
+    class="hospital-section"
+    id="hospital"
+  >
+
+    <h2>
+      AI Smart Hospital Locator
+    </h2>
+
+    <button
+      onclick="findNearestHospital()"
+      class="location-btn"
+    >
+      📍 Access My Location
+    </button>
+
+    <div id="locationStatus"></div>
+
+    <div id="hospitalMap"></div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <h3>
+      GeneVision AI © 2026
+    </h3>
+
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

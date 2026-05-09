@@ -1,0 +1,252 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial;
+}
+
+body{
+  background:#050816;
+  color:white;
+  overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 50px;
+  position:fixed;
+  width:100%;
+  background:rgba(0,0,0,0.4);
+  backdrop-filter:blur(10px);
+  z-index:1000;
+}
+
+.navbar h1{
+  color:#00f7ff;
+}
+
+.navbar ul{
+  display:flex;
+  gap:25px;
+  list-style:none;
+}
+
+.navbar a{
+  color:white;
+  text-decoration:none;
+}
+
+/* HERO */
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:120px 80px;
+}
+
+.hero-content{
+  width:50%;
+}
+
+.hero h2{
+  font-size:60px;
+  color:#00f7ff;
+}
+
+.hero p{
+  margin:20px 0;
+  font-size:20px;
+  line-height:1.5;
+}
+
+button{
+  padding:15px 30px;
+  border:none;
+  border-radius:12px;
+  background:#00f7ff;
+  color:black;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  transform:scale(1.05);
+}
+
+#dnaCanvas{
+  width:500px;
+  height:500px;
+}
+
+/* FEATURES */
+
+.features{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+  padding:50px;
+}
+
+.card{
+  background:rgba(255,255,255,0.05);
+  padding:30px;
+  border-radius:20px;
+  backdrop-filter:blur(10px);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+}
+
+/* PREDICTION */
+
+.prediction{
+  padding:80px 50px;
+}
+
+.prediction-box{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+  max-width:500px;
+}
+
+input,
+select,
+textarea{
+  padding:15px;
+  border:none;
+  border-radius:10px;
+}
+
+.results{
+  margin-top:30px;
+  line-height:2;
+}
+
+#severityMeter{
+  margin-top:20px;
+  font-size:22px;
+  font-weight:bold;
+}
+
+/* DNA */
+
+.dna-section{
+  padding:80px 50px;
+}
+
+.dna-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.dna-card{
+  background:rgba(255,255,255,0.05);
+  padding:25px;
+  border-radius:20px;
+}
+
+/* CHATBOT */
+
+.chatbot-section{
+  padding:80px 50px;
+}
+
+.chat-box{
+  height:300px;
+  overflow:auto;
+  background:#111827;
+  padding:20px;
+  border-radius:20px;
+}
+
+.bot,
+.user{
+  margin:10px 0;
+  padding:12px;
+  border-radius:10px;
+}
+
+.bot{
+  background:#00f7ff;
+  color:black;
+}
+
+.user{
+  background:#9333ea;
+}
+
+.chat-controls{
+  margin-top:20px;
+  display:flex;
+  gap:10px;
+}
+
+/* MAP */
+
+.hospital-section{
+  padding:80px 50px;
+}
+
+.location-btn{
+  margin-top:20px;
+}
+
+#locationStatus{
+  margin-top:20px;
+  color:#00f7ff;
+  font-size:18px;
+}
+
+#hospitalMap{
+  width:100%;
+  height:500px;
+  border-radius:25px;
+  margin-top:30px;
+  overflow:hidden;
+  border:2px solid #00f7ff;
+  box-shadow:0 0 30px rgba(0,255,255,0.3);
+}
+
+/* FOOTER */
+
+footer{
+  padding:40px;
+  text-align:center;
+  background:black;
+  margin-top:50px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero{
+  flex-direction:column;
+  text-align:center;
+}
+
+.hero-content{
+  width:100%;
+}
+
+.hero h2{
+  font-size:40px;
+}
+
+.navbar{
+  flex-direction:column;
+  gap:20px;
+}
+
+}
